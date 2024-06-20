@@ -1,24 +1,40 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
-    string s; long long k;
-    cin >> k >> s;
-    
-    string sa = "", sb = "";
-    sa.append(s.begin(), s.begin()+k);
-    
-    sb.append(s.begin()+k, s.end());
-    s = "";
+string reverse(string text)
+{
+    long long n = text.size();
+    string tmp = "";
+    for (int i = n - 1; i >= 0; i--)
+    {
+        tmp += text[i];
+    }
+    return tmp;
+}
 
-    for (auto i : sb){
-        s = i + s;
+int main()
+{
+    long long n;
+    cin >> n;
+    string text, s1, s2;
+    cin >> text;
+
+    for (size_t i = 0; i < n; i++)
+    {
+        s1 += text[i];
     }
-    for (auto i : sa){
-        s = i + s;
+    long long size_text = text.size();
+    for (size_t i = n; i < size_text; i++)
+    {
+        s2 += text[i];
     }
-    
-    cout << s;
-    
+
+    s1 = reverse(s1);
+    s2 = reverse(s2);
+    s1 += s2;
+
+    cout << s1 << endl;
+
     return 0;
 }

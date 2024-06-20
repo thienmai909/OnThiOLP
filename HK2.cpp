@@ -1,23 +1,27 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
+using ull = unsigned long long;
 
-int main() {
-  size_t n, s;
-  cin >> n;
+int main()
+{
+    ull n;
+    cin >> n;
+    vector<int64_t> a;
+    for (size_t i = 0; i < n; i++)
+    {
+        static ull tmp;
+        cin >> tmp;
+        a.push_back(tmp);
+    }
 
-  size_t a[n];
-  
-  for (size_t i = 0; i < n; i++) {
-    cin >> a[i];
-  }
+    int64_t sum = 0, k;
+    cin >> k;
+    for (size_t i = 0; i < k; i++)
+    {
+        sum += a[i];
+    }
 
-  size_t k;
-  cin >> k;
-  s = 0;
-  for (size_t i = 0; i < k; i++){
-    s = s%1000000007 + a[i]%1000000007;
-  }
-
-  cout << s;
-  return 0;
+    cout << sum << endl;
+    return 0;
 }
