@@ -6,6 +6,7 @@
         "compare": "cpp",
         "cstdint": "cpp",
         "format": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

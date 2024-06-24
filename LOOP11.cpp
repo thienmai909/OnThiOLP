@@ -1,19 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
-
+using ull = unsigned long long;
 
 int main(){
+    double a; cin >> a;
 
-    size_t n;
-    float s;
-    cin >> n;
-    s = 0;
-    for (size_t i = 1; i <= n; i++){
-        s += 1/i;
+    double sum = 0.0;
+    ull count = 0;
+    
+    while (sum < a){
+        ++count;
+        sum += double(1)/double(count);
     }
+    
+    // cout << sum << endl;
+    cout << count << endl;
 
-    cout << setprecision(5) << s << " " << n << endl;
 
     return 0;
 }
