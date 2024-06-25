@@ -1,12 +1,10 @@
 {
     "files.associations": {
-        "cmath": "cpp",
-        "iosfwd": "cpp",
-        "*.tcc": "cpp",
-        "compare": "cpp",
-        "cstdint": "cpp",
+        "xhash": "cpp",
         "format": "cpp",
-        "iostream": "cpp",
-        "ostream": "cpp"
+        "list": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp"
     }
 }
